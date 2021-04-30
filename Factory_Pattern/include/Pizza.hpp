@@ -1,3 +1,6 @@
+#pragma once
+#include "IngredientFactory.hpp"
+
 class Pizza {
 protected:
     IngredientFactory ingredients;
@@ -11,14 +14,15 @@ public:
     std::string meat;
     std::string vegetables;
 
+    ~Pizza();
+
     // Virtual Functions
     virtual void preparePizza() = 0;
 
     // Static Functions
-    void bakePizza(void);
-    void cutPizza(void);
-    void boxPizza(void);
+    virtual void bakePizza(void);
+    virtual void cutPizza(void);
+    virtual void boxPizza(void);
     void setPizzaName(std::string);
     std::string getPizzaName(void);
-    Pizza deliverPizza();
 };

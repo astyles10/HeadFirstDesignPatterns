@@ -1,6 +1,8 @@
 #include "Pizza.hpp"
 #include <iostream>
 
+Pizza::~Pizza() {}
+
 void Pizza::bakePizza() {
     std::cout << "Baking pizza for 25 mins at 180deg..." << std::endl;
 }
