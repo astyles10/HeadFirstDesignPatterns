@@ -7,7 +7,7 @@ ODIR	:=	debug
 CFILES	:=	$(wildcard $(SDIR)/*.cpp)
 OBJS	:=	$(patsubst $(SDIR)/%.cpp, $(ODIR)/%.o, $(CFILES))
 
-pizza: $(ODIR) $(OBJS)
+single: $(ODIR) $(OBJS)
 	$(CC) $(ODIR)/*.o -o $@ $(LFLAGS)
 
 $(ODIR)/%.o: $(SDIR)/%.cpp
